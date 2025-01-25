@@ -129,49 +129,12 @@
         },
     ];
 
-    // const findKeys = ( currentObject, searchKey ) => {
-    //     // Check isArray
-    //     return currentObject.map((item) => {
-    //         // check this item is object ?
-    //         return item[searchKey]; // Возвращаем значение ключа
-    //     });
-    // }
-    // const brands = findKeys(CARS, "brand")
-    // // console.log(CARS[(brands[0])])
-    // // const models = findKeys(CARS[brands[0]],'models' )
-    // console.log('__________', brands )
-    //
-    // console.log('_______________________________________')
-
-
-    // console.log(CARS.length);
-    // const result =  CARS.map((item, id, result) => {
-    //     console.log(item.brand, 'brands')
-    //     const models = item.models.map((model, id) => {
-    //
-    //         console.log(model.name, 'models');
-    //         const collection = model.collection.map((collectionItem) => {
-    //             Object.defineProperty(collectionItem, 'id', {
-    //                 enumerable: false
-    //             })
-    //             Object.keys(collectionItem).map((cItem, id) => {
-    //                 console.log(`${cItem}: ${collectionItem[cItem]}`)
-    //             });
-    //
-    //         })
-    //
-    //     })
-    //
-    // })
     const capitalize = (curStr) => `${curStr.charAt(0).toUpperCase()}${curStr.slice(1)}`
 
 
     const hw = <h1>Cars Spec</h1>
     const table = (
         <table>
-            {CARS.map((car) => {
-                console.log(car.brand)
-            })}
             <tbody>
             {CARS.map((car) => (
                 <React.Fragment  key={car.id}>
@@ -207,9 +170,7 @@
             ))}
             </tbody>
         </table>
-        )
-    ;
-
+    );
     root.render(<React.Fragment>
         {hw}
         {table}
